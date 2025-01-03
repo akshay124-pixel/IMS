@@ -15,7 +15,9 @@ function OutStockPage() {
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/stocks");
+        const response = await axios.get(
+          "https://imserver.onrender.com/api/stocks"
+        );
         setStockData(response.data);
       } catch (error) {
         setErrorMessage("Failed to load stock data.");
@@ -44,13 +46,16 @@ function OutStockPage() {
       setErrorMessage(""); // Clear any previous error messages
 
       // Send request to backend
-      const response = await axios.post("http://localhost:4000/api/out", {
-        stockName,
-        quantity,
-        recipientName,
-        purpose,
-        dateOfIssue,
-      });
+      const response = await axios.post(
+        "https://imserver.onrender.com/api/out",
+        {
+          stockName,
+          quantity,
+          recipientName,
+          purpose,
+          dateOfIssue,
+        }
+      );
 
       if (response.data.message === "Stock issued successfully") {
         setSuccessMessage(response.data.message);

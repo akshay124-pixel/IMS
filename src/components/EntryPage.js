@@ -37,7 +37,7 @@ function EntryPage() {
     try {
       // Sending POST request to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/add", // Ensure port matches backend server
+        "https://imserver.onrender.com/api/add", // Ensure port matches backend server
         formData,
         {
           withCredentials: true,
