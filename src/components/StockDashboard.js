@@ -421,7 +421,6 @@ function StockDashboard() {
   ];
 
   // Fetch stock data from MongoDB
-  // Fetch stock data from MongoDB
   const fetchStockData = async () => {
     try {
       const response = await axios.get(
