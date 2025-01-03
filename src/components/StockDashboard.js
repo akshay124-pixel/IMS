@@ -1105,18 +1105,17 @@ function StockDashboard() {
         <div
           className="table-container"
           style={{
-            width: "130vh",
-            margin: "0 auto",
-            overflowX: "auto",
-            boxShadow: "0 6px 18px rgba(0, 0, 0, 0.1)",
-            borderRadius: "10px",
-            maxWidth: "130vh",
-            marginTop: "20px",
-            display: "block", // This ensures the table body scrolls
+            width: "100%", // Set width to 100% for responsiveness
+            margin: "0 auto", // Center the table container
+            overflowX: "hidden", // Disable horizontal scrolling
+            boxShadow: "0 6px 18px rgba(0, 0, 0, 0.1)", // Optional: Keep shadow for aesthetics
+            borderRadius: "15px", // Adjusted for consistent border radius
+            marginTop: "20px", // Add margin for spacing from top
+            display: "block", // Ensures the table body scrolls
             overflowY: "auto", // Adds vertical scroll
-            maxHeight: "450px", // Set the height of the body to allow scrolling
-
-            borderRadius: "15px",
+            maxHeight: "450px", // Set a fixed height for scrolling
+            maxWidth: "100%", // Make sure it fits within the container
+            height: "auto", // Adjusts based on content but doesn't exceed maxHeight
           }}
         >
           <table
